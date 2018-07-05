@@ -42,7 +42,8 @@ void turnOnLedIfButtonIsPressed(void){
 //   Release -> Release -> Release -> [ON/OFF]
 
 void doTapTurnOnTapTurnOffLed(LedButtonInfo *Info){
-
+// cycles loop there'
+// FIRST_CIRCLE,SECOND_CIRCLE,THIRD_CYCLE
     int currentButtonState = getButtonState();
 
         // TURN ON (RELEASED - PRESS - RELEASED),1
@@ -101,7 +102,6 @@ void doTapTurnOnTapTurnOffLed(LedButtonInfo *Info){
               if(currentButtonState == BUTTON_RELEASED && Info->Cycles == FIRST_CYCLE){
                 Info->Cycles = SECOND_CYCLE;
               }
-
               if (currentButtonState == BUTTON_PRESSED && Info->Cycles == SECOND_CYCLE ){
                 Info->previousButtonState = BUTTON_PRESSED;
                 Info->Cycles = THIRD_CYCLE;
