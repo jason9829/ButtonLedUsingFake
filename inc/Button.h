@@ -5,8 +5,8 @@
   Return non-zero if button is pressed; Otherwise, return 0
 */
 typedef enum{
-  BUTTON_NOT_PRESS = 0,
-  BUTTON_PRESS     = 1,
+  BUTTON_RELEASED = 0,
+  BUTTON_PRESSED     = 1,
 } ButtonState;
 
 /*
@@ -29,6 +29,6 @@ typedef enum{
   THIRD_CYCLE  = 3,
 } cyclesState;
 
-int getButtonState(void);
-int getcyclesState(void);
+ButtonState getButtonState(void);
+
 #endif // _BUTTON_H

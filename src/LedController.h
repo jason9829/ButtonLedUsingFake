@@ -13,6 +13,7 @@ struct LedButtonInfo{
   cyclesState Cycles;
 };
 
+
 void turnOnLedIfButtonIsPressed(void);
 //void turnOffLedIfButtonIsPressed(void);
 void doTapTurnOnTapTurnOffLed(LedButtonInfo *Info);
